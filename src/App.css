@@ -1,38 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap');
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name{
+  font-family: 'Courgette', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  height: 100%;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-list{
   display: flex;
-  flex-direction: column;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  /* flex-direction:column; */
+  /* justify-content: center; */
+  font-family: 'Courgette', cursive;
+  gap:24px;
+  padding: 24px;;
+
+}
+.movie-container{
+  width: 340px;
+  /* background-color:teal; */
+  
+}
+
+.movie-specifications{
+  display:flex;
+
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+}
+.movie-name{
+  font-family: 'Courgette', cursive;
+  font-size:1.8rem;
+  font-weight:bold;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-rating{
+  font-size: 1.6rem;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-pic{
+  height: 400px;
+  width:  250px;
+  object-fit: cover;
+  background-color:wheat;
 }
+
+.movie-summary{
+  font-family: 'Lobster', cursive;
+  
+}
+.like-dislike{
+  font-size: 24px !important;
+}
+.counter-content{
+  display: flex !important;
+  gap: 12px;
+}
+
+
