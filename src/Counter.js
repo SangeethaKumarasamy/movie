@@ -1,40 +1,36 @@
 import { useState } from "react";
 import IconButton from '@mui/material/IconButton';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import Badge from '@mui/material/Badge';
-export function Counter() {
-    //like counter
-    const [like, setLike] = useState(0);
-    //unlike counter
-    const [unLike, setunLike] = useState(0);
-    return (
-        <div className="counter-content">
-             <IconButton
-              className="like-unlike" 
-              onClick={() => setLike(like + 1)}
-              color="primary" 
-              aria-label="upload picture" 
-              >
-                 
-        <Badge color="primary" badgeContent={like} max={20}>
-        👍
-        </Badge>
-             </IconButton>
-             
 
-             <IconButton
-              className="like-unlike" 
-              onClick={() => setunLike(unLike + 1)}
-              color="success" 
-              aria-label="upload picture" 
-              >
-        <Badge color="error" badgeContent={unLike} max={20}>
-        👎
-        </Badge>
-             </IconButton>
-            {/* <button className="like-unlike" onClick={() => setLike(like + 1)}>👍{like}</button>
-            <button className="like-unlike" onClick={() => setunLike(unLike + 1)}>👎{unLike}</button> */}
 
-        </div>
-
-    );
-}
+export function Counter(){
+  // const like=1;
+  const [like,setLike] =useState(0);
+  const [dislike,setdisLike]=useState(0);
+   return (
+     <div className="counter-button">
+     <div className="like_dislike">
+       <IconButton className="like_dislike" onClick={()=>setLike(like + 1)}
+       color="primary" aria-label="upload picture" component="span">
+       <Badge badgeContent={like} color="success">
+       <ThumbUpAltIcon />
+       </Badge>
+      </IconButton>
+      <IconButton className="like_dislike" onClick={()=>setdisLike(dislike+1)}
+      color="primary" aria-label="upload picture" component="span">
+       <Badge badgeContent={dislike} color="warning">
+       <ThumbDownAltIcon />
+       </Badge>
+      </IconButton>
+      
+         
+       {/* <Button variant="text" className="like_dislike" onClick={()=>setLike(like + 1)}>👍{like}</Button>
+       <Button variant="text" className="like_dislike" onClick={()=>setdisLike(dislike+1)}>👎{dislike}</Button> */}
+     
+     </div>
+     
+     </div>
+   )
+ }
